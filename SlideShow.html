@@ -1,5 +1,5 @@
 <html>
-    <link rel="stylesheet" herf="Slideshow.css">
+    <link rel="stylesheet" href="Slideshow.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <head>
         <title>Slide Show</title>
@@ -15,21 +15,20 @@
             <img class="slides" src="Images/funny-cat-facts.jpg" style="width:100%">
             <img class="slides" src="Images/P5.jpg" style="width:100%">
 
-            <a class="prev" onclick="slideshift(-1)">&#10094;</a>
-            <a class="next" onclick="slideshift(1)">&#10095;</a>
+            <button class="prev" onclick="slideshift(-1)">&#10094;</button>
+            <button class="next" onclick="slideshift(1)">&#10095;</button>
         </div>
 
         <script>
             var slideindex = 1;
-            showSlide(num);
-
+            showSlide(slideindex);
 
             function slideshift(num) {
-                showSlide(slideindex = slideindex + num);
+                showSlide(slideindex += num);
             }
 
             function showSlide(num) {
-                var pic = document.getElementsByClassName(slides);
+                var pic = document.getElementsByClassName("slides");
                 if(num > pic.length) {
                     slideindex = 1;
                     }
@@ -41,7 +40,6 @@
                 }
                 pic[slideindex-1].style.display = "block";
             }
-
         </script>
 
 
