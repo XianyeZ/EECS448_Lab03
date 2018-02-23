@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel = "stylesheet" href="colorchanger.css" type="text/css">
+        <title>color changer</title>
+    </head>
+
+    <body>
+        <p id = "part1">blahblahblahblahblah</p><br>
+        <p id = "part2">wraaaaaaaaggggghhhhh</p><br>
+        <p id = "part3">initial background color is green(0, 128, 0)</p>
+        <p id = "part4">initial border color is red(128, 0, 0)</p>
+        <p id = "part5">please input RGB value (0-255) and border width</p><br>
+
+        <form id = "inputs">
+            R: <input type = "number" name = "Red">
+            G: <input type = "number" name = "Gre">
+            B: <input type = "number" name = "Blu">
+            width: <input type = number name = "Wid"><br>
+            <input type = "button" onclick="changeBack(Red, Gre, Blu)" value="CHANGE BACK!">
+            <input type = "button" onclick="changeBorder(Red, Gre, Blu, Wid)" value="CHANGE BORDER!">
+        </form>
+
+        <script>
+            function changeBack(R, G, B) {
+                var red = R.value;
+                var green = G.value;
+                var blue = B.value;
+                if(red < 0 || red > 255 || green < 0 || green > 255 || blue < 0 || blue > 255) {
+                    alert("Invalid input.");
+                } else {
+                    document.body.style.background = "rgb(" + red + "," + green + "," + blue + ")";
+                    alert("Boooooom!");
+                }
+            }
+            function changeBorder(R, G, B, W) {
+                var red = R.value;
+                var green = G.value;
+                var blue = B.value;
+                var wid = W.value;
+                if(red < 0 || red > 255 || green < 0 || green > 255 || blue < 0 || blue > 255 || wid < 0) {
+                    alert("Invalid input.");
+                } else {
+                    document.getElementById("part1").style.border = wid + "px solid rgb(" + red + "," + green + "," + blue + ")";
+                    document.getElementById("part2").style.border = wid + "px solid rgb(" + red + "," + green + "," + blue + ")";
+                    document.getElementById("part3").style.border = wid + "px solid rgb(" + red + "," + green + "," + blue + ")";
+                    document.getElementById("part4").style.border = wid + "px solid rgb(" + red + "," + green + "," + blue + ")";
+                    document.getElementById("part5").style.border = wid + "px solid rgb(" + red + "," + green + "," + blue + ")";
+                    alert("Wooooow!");
+                }
+            }
+        </script>
+    </body>
+</html>
