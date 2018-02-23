@@ -1,0 +1,27 @@
+body {
+    background-image: url(images/corner_yugioh_dl.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+p {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+a {
+    background-color: white;
+}
+
+.txtcenter {
+    text-align: center;
+}
+
+.image {
+    display: block;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
